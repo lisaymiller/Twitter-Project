@@ -4,10 +4,13 @@
   xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
 >
   <head>
+    <div th:replace="fragments/styling"></div>
     <title>Feed</title>
-    <div th:replace="/fragments/styling :: header"></div>
   </head>
+
   <body>
+    <div th:replace="fragments/navbar"></div>
+
     <div class="container">
       <h2>Tweets</h2>
       <div th:each="tweet:${tweetList}">
